@@ -1,0 +1,72 @@
+﻿/*FONT IMPORTADA DO GOOGLE FONT*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+ 
+/*RESET*/
+*{
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+ -webkit-box-sizing: border-box;
+}
+ 
+body{
+ background: #d55084;
+}
+ 
+/*BLOCO DO CONTEÚDO HTML*/
+.bloco{
+ display: table;
+ position: relative; 
+ width: 400px;
+ padding: 5px 10px;
+ background: rgba(255,255,255,.1);
+ margin: 50px auto;
+ -webkit-border-radius: 50px;
+ -moz-border-radius: 50px;
+ border-radius: 50px; 
+}
+ 
+/*ESCONDENDO O INPUT[TYPE=RADIO]*/
+.bloco input[type=radio]{
+ display: none;
+}
+ 
+/*OS BOTÕES QUE SERÃO CLICADOS*/
+.bloco label{
+ float: left;
+ font-family: "Source Sans Pro";
+ font-size: 16px;
+ width: calc(100% / 3);
+ padding: 10px;
+ color: #fff;
+ -webkit-border-radius: 50px;
+ border-radius: 50px;
+ cursor: pointer;
+ text-align: center;
+}
+ 
+/*O SLIDE QUE VAI DESLIZAR ATÉ O BOTÃO CLICADO*/
+.botao_slider{
+ position: absolute;
+ background: rgba(255,255,255,.3);
+ top: 13px;
+ width: 90px;
+ height: 25px;
+ padding: 0 10px;
+ -webkit-border-radius: 50px;
+ -moz-border-radius: 50px;
+ border-radius: 50px;
+ -webkit-transition: all .5s ease;
+ transition: all .5s ease;
+}
+ 
+/*AQUI É ONDE A MÁGIA ACONTECE PARA DESLIZAR O ( BOTAO_SLIDE ) QUANDO CLICAR NOS BOTÕES ( #botao01, #botao02, #botao03 )*/
+#botao01:checked ~ .botao_slider{
+ left: 27px;
+}
+#botao02:checked ~ .botao_slider{
+ left: 154px;
+}
+#botao03:checked ~ .botao_slider{
+ left: 282px;
+}
